@@ -1,0 +1,146 @@
+/* Reset default margin, padding, and box-sizing for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply styling to the entire body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-attachment: fixed;
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url('background.png');
+}
+
+/* Center the content within a fixed-width container */
+.container {
+  width: 1280px;
+  margin: auto;
+}
+
+/* Style the container for the cards */
+#my-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+}
+
+/* Styling for individual cards */
+.card {
+  position: relative;
+  width: 380px;
+  min-height: 350px;
+  margin: 20px 0;
+  cursor: pointer;
+  transition: 1s ease;
+  /* Add a shadow to the card */
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* Enlarge the card on hover */
+.card:hover {
+  transform: scale(1.1);
+}
+
+/* Style for images within cards */
+.card img {
+  width: 100%;
+}
+
+/* Apply a filter to images on hover to reduce brightness */
+.card:hover .image {
+  filter: brightness(50%);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+/* Styling for the card details section */
+.details {
+  padding: 15px;
+}
+
+/* Style for the middle section within cards (hidden by default) */
+.middle {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  opacity: 0;
+  color: black;
+  transition: 0.5s ease;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  filter: brightness(100%);
+}
+
+/* Style for icons within the middle section */
+.middle i {
+  font-size: 70px;
+  color: red;
+}
+
+/* Style for the middle section heading */
+.middle h1 {
+  background-color: whitesmoke;
+  padding: 15px;
+}
+
+/* Reveal the middle section on card hover */
+.card:hover .middle {
+  opacity: 1;
+}
+
+/* Styling for individual cards based on their IDs */
+#Python_card {
+  background-color: rgba(255, 166, 0, 0.7);
+  color: white;
+}
+
+#JavaScript_card {
+  background-color: rgba(255, 0, 0, 0.7);
+  color: white;
+}
+
+#Front_End_card {
+  background-color: rgba(128, 0, 128, 0.7);
+  color: white;
+}
+
+#Iphone_card {
+  background-color: rgba(30, 143, 255, 0.7);
+  color: white;
+}
+
+#study_card {
+  background-color: rgba(50, 205, 50, 0.7);
+  color: white;
+}
+
+#improvement_card {
+  background-color: rgba(76, 0, 130, 0.7);
+  color: white;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1280px) {
+  .container {
+      width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+      width: 95%;
+  }
+
+  .card:hover {
+      transform: scale(1);
+  }
+}
